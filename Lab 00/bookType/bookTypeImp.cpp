@@ -8,21 +8,21 @@ void bookType::setTitle(string BookName){
 string bookType::getTitle(){
     return title;
 };
-
+//
 void bookType::setStock(int amount) {
     stock = amount;
 };
 int bookType::getStock() {
     return stock;
 };
-
+//
 void bookType::addAuthor(string name) {
     if (numAuthors < 4) {
         authors[numAuthors] = name;
         numAuthors++;
     }
     else
-        cout << "Maximum number of authors has been reach for this book" << endl;
+        cout << "Maximum number of authors has been reached for this book" << endl;
 };
 void bookType::getAuthor() {
     cout << "Authors: ";
@@ -32,12 +32,27 @@ void bookType::getAuthor() {
     cout << endl;
 };
 void bookType::setPublisher(string pub) {
-    
+    publisher = pub;
 };
-string bookType::getPublisher();
-void bookType::setisbn(int bookNum);
-int bookType::getisbn();
-void bookType::setPrice(double cost);
-double bookType::getPrice();
-void bookType::setPublicationYear(int year);
-int bookType::getPublicationYear();
+string bookType::getPublisher() {
+    return publisher;
+};
+
+void bookType::setisbn(int bookNum) {
+    isbn = bookNum;
+};
+int bookType::getisbn() {
+    return isbn;
+};
+void bookType::setPrice(double cost) {
+    price = cost;
+};
+double bookType::getPrice() {
+    return price;
+};
+void bookType::setPublicationYear(int year) {
+    publicationYear = year;
+};
+int bookType::getPublicationYear() {
+    return publicationYear;
+};

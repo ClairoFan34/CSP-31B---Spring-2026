@@ -3,6 +3,8 @@ using namespace std;
 
 class bookType {
     public:
+
+
         bookType();
         void setTitle(string BookName);
         string getTitle();
