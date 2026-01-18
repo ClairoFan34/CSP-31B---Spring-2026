@@ -1,21 +1,43 @@
 #include "bookType.h"
+#include <iostream>
+using namespace std;
 
 void bookType::setTitle(string BookName){
+    title = BookName;
+};
+string bookType::getTitle(){
+    return title;
+};
+
+void bookType::setStock(int amount) {
+    stock = amount;
+};
+int bookType::getStock() {
+    return stock;
+};
+
+void bookType::addAuthor(string name) {
+    if (numAuthors < 4) {
+        authors[numAuthors] = name;
+        numAuthors++;
+    }
+    else
+        cout << "Maximum number of authors has been reach for this book" << endl;
+};
+void bookType::getAuthor() {
+    cout << "Authors: ";
+    for (int i = 0; i < numAuthors; i++) {
+        cout << ", " <<authors [numAuthors];
+    }
+    cout << endl;
+};
+void bookType::setPublisher(string pub) {
     
 };
-
-string bookType::getTitle(){
-
-};
-    void setStock(int amount);
-    int getStock();
-        void addAuthor(int amount);
-        void getAuthor();
-        void setPublisher(string pub);
-        string getPublisher();
-        void setisbn(int bookNum);
-        int getisbn();
-        void setPrice(double cost);
-        double getPrice();
-        void setPublicationYear(int year);
-        int getPublicationYear();
+string bookType::getPublisher();
+void bookType::setisbn(int bookNum);
+int bookType::getisbn();
+void bookType::setPrice(double cost);
+double bookType::getPrice();
+void bookType::setPublicationYear(int year);
+int bookType::getPublicationYear();

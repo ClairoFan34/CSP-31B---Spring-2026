@@ -8,7 +8,7 @@ class bookType {
         string getTitle();
         void setStock(int amount);
         int getStock();
-        void addAuthor(int amount);
+        void addAuthor(string name);
         void getAuthor();
         void setPublisher(string pub);
         string getPublisher();
