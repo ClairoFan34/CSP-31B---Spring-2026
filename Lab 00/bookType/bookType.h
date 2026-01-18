@@ -3,9 +3,10 @@ using namespace std;
 
 class bookType {
     public:
-
-
+    // Constructors
         bookType();
+        bookType(string BookName, int amount, string name, string pub, int bookNum, int cost, int year);
+    // Setters and getters
         void setTitle(string BookName);
         string getTitle();
         void setStock(int amount);

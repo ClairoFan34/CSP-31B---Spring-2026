@@ -2,6 +2,21 @@
 #include <iostream>
 using namespace std;
 
+
+//Constructors
+bookType::bookType() {};
+bookType::bookType(string BookName, int amount, string name, string pub, int bookNum, int cost, int year){
+    title = BookName;
+    stock = amount;
+    authors[0] = name;
+    numAuthors++;
+    publisher = pub;
+    isbn = bookNum;
+    price = cost;
+    publicationYear = year;
+};
+
+// Setter and getters
 void bookType::setTitle(string BookName){
     title = BookName;
 };
@@ -27,7 +42,7 @@ void bookType::addAuthor(string name) {
 void bookType::getAuthor() {
     cout << "Authors: ";
     for (int i = 0; i < numAuthors; i++) {
-        cout << ", " <<authors [numAuthors];
+        cout << authors [numAuthors] << " ";
     }
     cout << endl;
 };
