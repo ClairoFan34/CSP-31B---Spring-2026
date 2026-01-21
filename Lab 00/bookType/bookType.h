@@ -3,10 +3,9 @@ using namespace std;
 
 class bookType {
     public:
-    // Constructors
         bookType();
-        bookType(string BookName, int amount, string name, string pub, int bookNum, int cost, int year);
-    // Setters and getters
+        bookType(string BookName, int amount, string name, string pub, int bookNum, double cost, int year);
+
         void setTitle(string BookName);
         string getTitle();
         void setStock(int amount);
@@ -26,7 +25,7 @@ class bookType {
         string authors[4];
         int numAuthors;
         string publisher;
-        int isbn;
+        long isbn;
         double price;
         int publicationYear;
         int stock;

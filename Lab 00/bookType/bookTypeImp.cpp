@@ -5,7 +5,7 @@ using namespace std;
 
 //Constructors
 bookType::bookType() {};
-bookType::bookType(string BookName, int amount, string name, string pub, int bookNum, int cost, int year){
+bookType::bookType(string BookName, int amount, string name, string pub, int bookNum, double cost, int year){
     title = BookName;
     stock = amount;
     authors[0] = name;
@@ -42,7 +42,7 @@ void bookType::addAuthor(string name) {
 void bookType::getAuthor() {
     cout << "Authors: ";
     for (int i = 0; i < numAuthors; i++) {
-        cout << authors [numAuthors] << " ";
+        cout << authors [i] << " ";
     }
     cout << endl;
 };
