@@ -48,5 +48,5 @@ void personType::setMiddleName (string middle) {
 }
 
 bool personType::checkName (personType person) {
-        
+        return this ->firstName == person.firstName;
 }

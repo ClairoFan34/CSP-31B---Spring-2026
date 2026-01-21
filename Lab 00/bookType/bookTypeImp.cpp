@@ -3,7 +3,6 @@
 using namespace std;
 
 
-//Constructors
 bookType::bookType() {};
 bookType::bookType(string BookName, int amount, string name, string pub, int bookNum, double cost, int year){
     title = BookName;
@@ -16,7 +15,6 @@ bookType::bookType(string BookName, int amount, string name, string pub, int boo
     publicationYear = year;
 };
 
-// Setter and getters
 void bookType::setTitle(string BookName){
     title = BookName;
 };
