@@ -1,6 +1,6 @@
 class Circle {
     public:
-        Circle (double);
+        Circle (double = 1);
         Circle (Circle &);
         void setRadius (double &);
         double getRadius () const;
