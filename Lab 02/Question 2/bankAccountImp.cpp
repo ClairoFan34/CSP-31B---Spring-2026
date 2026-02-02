@@ -17,12 +17,21 @@ double bankAccount::getBalance() {
 
 void bankAccount::makeDeposit(double amount) {
     balance += amount;
+    depositCount++;
+    amountDeposited += amount;
 }
 
 void bankAccount::withdraw(double amount) {
     balance -= amount;
+    withdrawCount++;
+    amountWithdrawn += amount;
 }
 
 void bankAccount::makeMonthlyStatement() {
-      
+      cout << "Current Balance: " << balance << endl;
+      cout << "Withdrawal summary: " << endl;
+      cout << "Amount withdrawn: " << amountWithdrawn << " - Withdrawals made: " << withdrawCount << endl; 
+      cout << "Deposit Summary:" << endl;
+      cout << "Amount deposited: " << amountDeposited << " - Deposits made: " << depositCount << endl;
+
 };

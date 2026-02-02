@@ -13,4 +13,8 @@ class bankAccount {
         string name;
         int accountNumber;
         int balance;
+        int withdrawCount;
+        double amountWithdrawn;
+        int depositCount;
+        double amountDeposited;
 };
