@@ -1,10 +1,12 @@
+#pragma once
 #include "checkingAccount.h"
-#include <string>
-
 class noServiceChargeChecking : public checkingAccount {
-    public:
-        
-    private:
-        double minBalance;
-        double interestRate;
+public:
+    noServiceChargeChecking(string n, int acct, double bal, double minB, double intR);
+    void withdraw(double amount) override;
+    void writeCheck(double amount) override;
+    void makeMonthlyStatement() override;
+protected:
+    double minimumBalance;
+    double interestRate;
 };

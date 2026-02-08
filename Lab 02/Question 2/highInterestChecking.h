@@ -1,9 +1,8 @@
+#pragma once
 #include "noServiceChargeChecking.h"
 
 class highInterestChecking : public noServiceChargeChecking {
-    public:
-
-    private:
-        double highInterestRate;
-        double highMinBalance;
+public:
+    highInterestChecking(string n, int acct, double bal);
 };
+
