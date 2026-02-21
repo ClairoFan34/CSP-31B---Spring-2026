@@ -6,6 +6,7 @@ int main () {
     fractionType x;
     fractionType y;
     fractionType z;
+    fractionType f1(1,3);
 
     cout << "Enter fractions as a/b" << endl;
     cout << "Enter first fraction: ";
@@ -19,6 +20,9 @@ int main () {
     // The message is for addition though as that what the assignmets asks for
     cout << "The sum of your values is : " << z << endl;
 
-
-
+    // pre and post increment test
+    cout << ++f1 << endl;
+    cout << f1++ << endl;
+    cout << f1-- << endl;
+    cout << f1 << endl;
 }
