@@ -1,5 +1,0 @@
-class fractionType {
-    public:
-        
-    private:
-};
