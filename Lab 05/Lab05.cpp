@@ -19,7 +19,7 @@ double power (double x, int n) {
 string reverseString(string str) {
     if (str == "")
         return "";
-    return (str[str.length() - 1]);
+    return;
 }
 
 int main() {
@@ -36,6 +36,7 @@ int main() {
     cout << "Testing sumOfDigits(10): " << sumOfDigits(10) << endl;
     // Power function section
     cout << "Part 2: Power function" << endl;
+    cout << "Testing power (2,3)" << end;
     cout << power(2,-2);
     // Reversed string section
     cout << "Part "
