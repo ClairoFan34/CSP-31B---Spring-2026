@@ -47,6 +47,11 @@ public:
      //Added by me
      virtual void deleteSmallest() = 0;
      virtual void deleteAll() = 0;
+     int getKthElement(int k);
+     void deleteKthElement(int k);
+     void rotate();
+     void reversePrint();
+     void reverseRecursivePrint(nodeType* curr);
      //
      virtual bool search(const int& searchItem) const = 0;
      virtual void insertFirst(const int& newItem) = 0;
@@ -55,6 +60,64 @@ public:
 };
 
 //Methods added by me :O
+
+int linkedListType::getKthElement(int k) {
+     assert(k > 0);
+     nodeType *curr = first;
+     int i;
+     for (i = 0 ; i < k - 1; i++) {
+          if (curr == nullptr)
+               assert(false);
+          curr = curr->link;
+     }
+     return curr->info;
+}
+
+void linkedListType::deleteKthElement(int k) {
+     assert(k > 0);
+     nodeType *curr = first;
+     nodeType *prev = nullptr;
+     int i;
+     for (i = 0 ; i < k - 1; i++) {
+          prev = curr;
+          curr = curr->link;
+          assert(curr != nullptr);
+     }
+     if (prev == nullptr) {
+        first = first->link;
+        if (first == nullptr)
+          last = nullptr; 
+        } 
+        else {
+          prev->link = curr->link;
+          if (curr == last)    
+               last = prev;
+        }
+     count--;
+}
+
+void linkedListType::rotate() {
+     insertLast(getKthElement(1));
+     deleteNode(getKthElement(1));
+}
+
+void linkedListType::reversePrint() {
+    reverseRecursivePrint(first);
+    cout << endl;
+}
+
+void linkedListType::reverseRecursivePrint(nodeType* curr) {
+    if (curr == nullptr)  
+        return;
+
+    reverseRecursivePrint(curr->link); 
+    cout << curr->info;            
+    if (curr != first)
+        cout << "->";              
+}
+
+
+
 linkedListType::linkedListType() //default constructor
 {
      first = nullptr;
