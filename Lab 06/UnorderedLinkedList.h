@@ -36,8 +36,7 @@ public:
      linkedListType(const linkedListType& otherList);
      ~linkedListType();
 
-     const linkedListType& operator=
-          (const linkedListType&);
+     const linkedListType& operator=(const linkedListType&);
      void initializeList();
      bool isEmptyList() const;
      void print() const;
@@ -45,7 +44,10 @@ public:
      void destroyList();
      int front() const;
      int back() const;
-     void deleteSmallest();
+     //Added by me
+     virtual void deleteSmallest() = 0;
+     virtual void deleteAll() = 0;
+     //
      virtual bool search(const int& searchItem) const = 0;
      virtual void insertFirst(const int& newItem) = 0;
      virtual void insertLast(const int& newItem) = 0;
@@ -53,10 +55,6 @@ public:
 };
 
 //Methods added by me :O
-void linkedListType::deleteSmallest(){
-     
-}
-     
 linkedListType::linkedListType() //default constructor
 {
      first = nullptr;
@@ -212,7 +210,38 @@ public:
      void insertFirst(const int& newItem);
      void insertLast(const int& newItem);
      void deleteNode(const int& deleteItem);
+     virtual void deleteSmallest();
+     virtual void deleteAll();
  };
+
+// More methods added by me: 
+// deleteSmallest, this one only deletes the first instance
+void unorderedLinkedList::deleteSmallest(){
+     nodeType *curr = first;
+     int lowest = curr->info;
+     while (curr != nullptr) {
+          if (curr->info < lowest) {
+               lowest = curr->info;
+          }
+          curr = curr->link;
+     }
+     deleteNode(lowest);
+}
+
+//Same as deleteSmalles but does it for all occurences
+void unorderedLinkedList::deleteAll() {
+     nodeType *curr = first;
+     int lowest = curr->info;
+     while (curr != nullptr) {
+          if (curr->info < lowest) {
+               lowest = curr->info;
+          }
+          curr = curr->link;
+     }
+     while (search(lowest) == true) {
+          deleteNode(lowest);
+     }
+}
 
 
 bool unorderedLinkedList::search(const int& searchItem) const

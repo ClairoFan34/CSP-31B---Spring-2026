@@ -69,6 +69,7 @@ int main() {
 
     cout << "Part 4: Fibonacci Sequence" << endl;
     cout << "Testing fibonacci(10)" << endl;
+    cout << "Part 4: Fibonacci Sequence" << endl;
     cout << "Trace: fibonacci(10) = 10 + fibonacci(9)" << endl;
     cout << "Trace: fibonacci(9) = 9 + fibonacci(8)" << endl;
     cout << "Trace: fibonacci(8) = 8 + fibonacci(7)" << endl;
