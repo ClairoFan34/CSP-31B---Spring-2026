@@ -109,7 +109,6 @@ void linkedListType::reversePrint() {
 void linkedListType::reverseRecursivePrint(nodeType* curr) {
     if (curr == nullptr)  
         return;
-
     reverseRecursivePrint(curr->link); 
     cout << curr->info;            
     if (curr != first)

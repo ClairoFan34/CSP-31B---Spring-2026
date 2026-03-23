@@ -1,5 +1,5 @@
 #include <iostream>
-#include "UnorderedLinkedList.h" // your header file
+#include "UnorderedLinkedList.h" 
 using namespace std;
 
 int main() {
@@ -42,10 +42,6 @@ int main() {
 
     cout << "List in reverse: ";
     list.reversePrint();
-
-    return 0;
-
-    
 
     return 0;
 }
